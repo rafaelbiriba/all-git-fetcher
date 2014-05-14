@@ -15,7 +15,9 @@ See some [examples](#examples) in section below.
 Just run:
 
 ```bash
-wget https://raw.githubusercontent.com/rafaelbiriba/all-git-fetcher/master/bin/allgitfetcher -O /usr/bin/allgitfetcher && sudo chmod +x /usr/bin/allgitfetcher
+sudo wget https://raw.githubusercontent.com/rafaelbiriba/all-git-fetcher/master/bin/allgitfetcher \
+-O /usr/bin/allgitfetcher && \
+sudo chmod +x /usr/bin/allgitfetcher
 ```
 
 ## Run
