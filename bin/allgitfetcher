@@ -38,7 +38,7 @@ function update {
         git rebase origin/master > /dev/null 2>&1
         printf "${GREEN}OK! "
       else
-        printf "${RED}Ignored: Modifications not commited! "
+        printf "${RED}Ignored: Modifications not committed! "
       fi
 
       printf "${WHITE}--- ${GREEN}ALL DONE!!!\n"
