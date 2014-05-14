@@ -15,7 +15,8 @@ See some [examples](#examples) in section below.
 Just run in your terminal:
 
 ```bash
-sudo wget https://raw.githubusercontent.com/rafaelbiriba/all-git-fetcher/master/bin/allgitfetcher \
+sudo wget --no-check-certificate \
+https://raw.githubusercontent.com/rafaelbiriba/all-git-fetcher/master/bin/allgitfetcher \
 -O /usr/bin/allgitfetcher && sudo chmod +x /usr/bin/allgitfetcher
 ```
 
