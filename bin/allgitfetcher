@@ -23,7 +23,13 @@ function update {
       printf "       "
 
       if [ -e ".allfetch_ignore" ]; then
-        printf "${RED}Ignored... "
+        printf "${RED}Ignored: .allfetch_ignore detected... "
+        printf "${WHITE}--- ${GREEN}ALL DONE"
+        return;
+      fi
+
+      if [[ -z `grep "fetch" .git/config` ]]; then
+        printf "${RED}Ignored: No remote detected to fetch... "
         printf "${WHITE}--- ${GREEN}ALL DONE"
         return;
       fi
