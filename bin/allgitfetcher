@@ -1,4 +1,8 @@
 #!/bin/bash
+# Created by Rafael Biriba
+# Email: biribarj@gmail.com
+# Documentation at github.com/rafaelbiriba/all-git-fetcher
+# Short description:
 # Update all git directories below current directory or specified directory
 # Skips directories that contain a file called .allfetch_ignore
 
@@ -10,11 +14,12 @@ WHITE='\e[0m'
 WHITEUNDER='\e[4;37m'
 
 function update {
-  local d="$1"
-  if [ -d "$d" ]; then
-    cd $d > /dev/null
+  local path="$1"
+  if [ -d "$path" ]; then
+    cd $path > /dev/null
     if [ -d ".git" ]; then
-      printf "${WHITE}Project ${WHITEUNDER}$d${WHITE}: \n"
+      current_path=`pwd`
+      printf "${WHITE}Project ${WHITEUNDER}${current_path#$running_directory}${WHITE}: \n"
       printf "       "
 
       if [ -e ".allfetch_ignore" ]; then
@@ -28,16 +33,19 @@ function update {
       printf "${GREEN}OK! "
       printf "${WHITE}- ${YELLOW}Git Rebasing origin/master... "
       status=`git status`
+
       if [[ "$status" =~ "nothing to commit" ]]; then
         git rebase origin/master > /dev/null 2>&1
         printf "${GREEN}OK! "
       else
         printf "${RED}Ignored: Modifications not commited! "
       fi
+
       printf "${WHITE}--- ${GREEN}ALL DONE!!!\n"
     else
       scan *
     fi
+
     cd .. > /dev/null
   fi
 }
@@ -48,11 +56,11 @@ function scan {
   done
 }
 
-if [ "$1" != "" ]; then cd $1 > /dev/null; fi
+running_directory=`pwd`/
 printf "####################################################\n"
 printf "##                ${YELLOW}ALL GIT Fetcher${WHITE}                 ##\n"
 printf "## Visit: github.com/rafaelbiriba/all-git-fetcher ##\n"
 printf "####################################################\n\n"
-printf "${WHITE}Scanning ${YELLOW}${PWD}${WHITE}: \n\n"
+printf "${WHITE}Scanning for local projects directories at ${YELLOW}${running_directory}${WHITE}: \n\n"
 scan *
 printf "\n\n"
