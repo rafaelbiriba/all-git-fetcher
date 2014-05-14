@@ -2,7 +2,7 @@
 
 Simple binary that update all git directories below current directory.
 
-## How works
+## How it works
 
 The script will run git fetch over the git project.
 
@@ -12,19 +12,18 @@ See some [examples](#examples) in section below.
 
 ## Installation
 
-Just run:
+Just run in your terminal:
 
 ```bash
 sudo wget https://raw.githubusercontent.com/rafaelbiriba/all-git-fetcher/master/bin/allgitfetcher \
--O /usr/bin/allgitfetcher && \
-sudo chmod +x /usr/bin/allgitfetcher
+-O /usr/bin/allgitfetcher && sudo chmod +x /usr/bin/allgitfetcher
 ```
 
 ## Run
 
 Just run the command "**allgitfetcher**" in the base directory of yours projects.
 
-Be Happy :)
+**Wait and Be Happy :)**
 
 ### Ignoring a specific project
 
