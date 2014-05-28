@@ -20,7 +20,7 @@ TITLE='\e[30;43m'
 function update {
   local path="$1"
   if [ -d "$path" ]; then
-    cd $path > /dev/null
+    cd -- "$path" > /dev/null
     if [ -d ".git" ]; then
       current_path=`pwd`
       printf "${YELLOW}#${WHITE} ${WHITE}Project ${WHITEUNDER}${current_path#$running_directory}${WHITE}: \n"
