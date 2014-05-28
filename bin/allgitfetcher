@@ -7,7 +7,7 @@
 # Skips directories that contain a file called .allfetch_ignore
 
 ######## VERSION ########
-VERSION="0.1.0"
+VERSION="0.1.1"
 
 BLUE="\e[0;34m"
 RED="\e[0;31m"
