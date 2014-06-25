@@ -1,4 +1,4 @@
-# ALL Git Fetcher - version 0.1.1
+# ALL Git Fetcher - version 0.1.2
 
 Simple binary that update all git directories below current directory.
 

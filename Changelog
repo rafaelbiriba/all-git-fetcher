@@ -1,0 +1,8 @@
+0.1.2
+  - Bugfix issue #5: Checking the current branch before try rebase
+
+0.1.1
+  - Bugfix issue #4: Folder with minus sign
+
+0.1.0
+  - First release
