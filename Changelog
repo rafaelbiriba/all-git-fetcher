@@ -1,3 +1,7 @@
+0.1.3
+  - Adding final report status "Manual action required" if something fails
+  - Bugfix issue #6: Aborting the rebase if conflict is detected.
+
 0.1.2
   - Bugfix issue #5: Checking the current branch before try rebase
 
